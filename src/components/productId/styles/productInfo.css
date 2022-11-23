@@ -1,7 +1,25 @@
 .product-info {
-  width: 100%;
+  width: 50%;
   max-width: 500px;
-  padding: 20px;
+}
+.header-product {
+  position: absolute;
+  top: -30px;
+  left: 5vw;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.header-product :nth-child(1) {
+  text-decoration: none;
+  color: black;
+}
+.header-product :nth-child(2) {
+  font-size: 7px;
+}
+.header-product__title {
+  font-size: 15px;
+  font-weight: 600;
 }
 .product-info__title {
   font-weight: 600;
@@ -76,4 +94,14 @@
 .product-info__btn:hover {
   filter: brightness(1.1);
   transition: filter 100ms ease;
+}
+
+@media (max-width: 860px) {
+  .product-info {
+    width: 100%;
+    padding-bottom: 20px;
+  }
+  .header-product {
+    top: -50px;
+  }
 }

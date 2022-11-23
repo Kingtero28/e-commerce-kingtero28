@@ -35,8 +35,8 @@ const LoginScreen = () => {
   
   if(isLogged) {
     return (
-    <div>
-      <img src="http://www.epayment.com.ng/images/blog-wp-login-1200x400.png" alt="" />
+    <div className='logout'>
+      <h2>¡HELLO!</h2>
       <button onClick={handleLogout}>Logout</button>
     </div>
     )
@@ -44,17 +44,25 @@ const LoginScreen = () => {
 
   return (
     <div className='login-screen'>
-      <form className='login-screen__form' onSubmit={handleSubmit(submit)}>
-        <div>
-          <label htmlFor="email">Email</label>
-          <input type="email" id='email' {...register('email')} />
+      <div className='login-screen__container'>
+        <h3 className='title'>Welcome! Enter your email and password to continue</h3>
+        <div className='login-screen__data'>
+          <h3>Test data</h3>
+          <p><i class="fa-regular fa-envelope"></i><span>danielkq8@gmail.com</span></p>
+          <p><i class="fa-solid fa-lock"></i><span>daniel1228</span></p>
         </div>
-        <div>
-          <label htmlFor="password">Password</label>
-          <input type="password" id='password' {...register('password')} />
-        </div>
-        <button>Login</button>
-      </form>
+        <form className='login-screen__form' onSubmit={handleSubmit(submit)}>
+          <div>
+            <label htmlFor="email">Email</label>
+            <input type="email" id='email' {...register('email')} />
+          </div>
+          <div>
+            <label htmlFor="password">Password</label>
+            <input type="password" id='password' {...register('password')} />
+          </div>
+          <button>Login</button>
+        </form>
+      </div>
     </div>
   )
 }

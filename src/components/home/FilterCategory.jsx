@@ -2,6 +2,7 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { getAllProducts, getProductsByCategory } from '../../store/slices/products.slice'
+import './styles/filterCategory.css'
 
 const FilterCategory = () => {
 
@@ -25,7 +26,7 @@ const FilterCategory = () => {
   }
 
   return (
-    <article>
+    <article className='filterCategory'>
       <h3>Category</h3>
       <ul>
         <li onClick={() => handleFetchCategory()}>All Products</li>

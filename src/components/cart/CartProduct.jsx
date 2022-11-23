@@ -23,7 +23,7 @@ const CartProduct = ({product}) => {
     <article className='cart-p'>
       <h2>{product.title}</h2>
       <ul>
-        <li><span>Price</span>{product.price}</li>
+        <li><span>Price</span>${product.price}</li>
         <li><span>Quantity</span>{product.productsInCart.quantity}</li>
       </ul>
       <button onClick={handleDelete} className='cart-p__btn'><i className="cart-p__icon fa-solid fa-trash-can"></i></button>

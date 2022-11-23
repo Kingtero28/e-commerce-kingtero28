@@ -11,18 +11,18 @@ const Header = () => {
       <nav className="header__nav">
         <ul className="header__list">
           <li className="header__item">
-            <NavLink className="header__link" to='/login'>
-              Login
+            <NavLink  className="header__link" to='/login'>
+              <ion-icon  name="person-outline"></ion-icon>
             </NavLink>
           </li>
           <li className="header__item">
             <NavLink className="header__link" to='/purchases'>
-              Purchases
+              <ion-icon name="archive-outline"></ion-icon>
             </NavLink>
           </li>
           <li className="header__item">
             <NavLink className="header__link" to='/cart'>
-              Cart
+              <ion-icon name="cart-outline"></ion-icon>
             </NavLink>
           </li>
         </ul>
@@ -30,5 +30,5 @@ const Header = () => {
     </header>
   );
 };
-    
+
 export default Header;

@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import getConfig from '../../utils/getConfig'
 import './styles/productInfo.css'
 
@@ -32,6 +33,11 @@ const ProductInfo = ({product}) => {
 
   return (
     <article className='product-info'>
+      <div className='header-product'>
+        <Link to='/'>Home</Link>
+        <h2>🔴</h2>
+        <h2 className='header-product__title'>{product?.title}</h2>
+      </div>
       <h2 className='product-info__title'>{product?.title}</h2>
       <p className='product-info__description'>{product?.description}</p>
       <footer className='product-info__footer'>

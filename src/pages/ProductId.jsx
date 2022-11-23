@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom'
 import ProductInfo from '../components/productId/ProductInfo'
 import SimilarProducts from '../components/productId/SimilarProducts'
 import SliderImgs from '../components/productId/SliderImgs'
+import './styles/productId.css'
 
 const ProductId = () => {
 
@@ -19,11 +20,13 @@ const ProductId = () => {
   }, [id])
 
   return (
-    <div>
-      {
-        product && <SliderImgs product={product} />
-      }
-      <ProductInfo product={product} />
+    <div className='productId'>
+      <div className='productId__header'>
+        {
+          product && <SliderImgs product={product} />
+        }
+        <ProductInfo product={product} />
+      </div>
       <SimilarProducts product={product} />
     </div>
   )
